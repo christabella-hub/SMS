@@ -1,0 +1,160 @@
+* {
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f4f5f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 1000px;
+}
+
+.card {
+  background: #fff;
+  display: flex;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.1);
+}
+
+/* LEFT SIDE */
+.login {
+  width: 50%;
+  padding: 60px;
+}
+
+.login h1 {
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+.input-group {
+  margin-bottom: 18px;
+  position: relative;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 14px 20px;
+  border-radius: 30px;
+  border: 1px solid #ddd;
+  outline: none;
+  font-size: 14px;
+}
+
+.password .eye {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.forgot {
+  display: block;
+  text-align: right;
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 24px;
+  text-decoration: none;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 30px;
+  border: none;
+  background: #011c38;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.divider {
+  text-align: center;
+  margin: 30px 0;
+  position: relative;
+}
+
+.divider span {
+  background: #fff;
+  padding: 0 10px;
+  font-size: 12px;
+  color: #999;
+}
+
+.divider::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #ddd;
+  z-index: -1;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.social {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #011c38;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.register {
+  text-align: center;
+  font-size: 13px;
+}
+
+.register a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+/* RIGHT SIDE */
+.illustration {
+  width: 50%;
+  background: #f5faf3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  text-align: center;
+}
+
+.illustration img {
+  width: 80%;
+  margin-bottom: 20px;
+}
+
+.illustration p {
+  font-size: 16px;
+  color: #333;
+}

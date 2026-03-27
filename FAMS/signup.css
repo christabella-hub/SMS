@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 1000px;
+}
+
+.card {
+  display: flex;
+  background: #fff;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 40px 80px rgba(0,0,0,0.1);
+}
+
+/* LEFT */
+.auth {
+  width: 50%;
+  padding: 60px;
+}
+
+.auth h1 {
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.auth input {
+  width: 100%;
+  padding: 14px 20px;
+  border-radius: 30px;
+  border: 1px solid #ddd;
+  margin-bottom: 16px;
+  outline: none;
+  font-size: 14px;
+}
+
+.password-field {
+  position: relative;
+}
+
+.password-field .eye {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.primary-btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 30px;
+  border: none;
+  background: #011c38;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Divider */
+.divider {
+  text-align: center;
+  font-size: 12px;
+  color: #999;
+  margin: 30px 0 20px;
+}
+
+/* Socials */
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.social {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #011c38;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Switch */
+.switch {
+  text-align: center;
+  font-size: 13px;
+}
+
+.switch a {
+  color: #2ecc71;
+  text-decoration: none;
+}
+
+/* RIGHT */
+.brand {
+  width: 400px;
+  background: #f6faf3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+}
+
+.brand img {
+  width: 400px;
+  margin-bottom: 20px;
+}
+
+.brand p {
+  font-size: 15px;
+  color: #333;
+}

@@ -1,0 +1,210 @@
+body{
+ background-color:  #f5f5f7;
+  margin: 0;
+}
+
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text","Helvetica Neue", Arial, sans-serif;
+}
+
+.logo{
+    height: 75px;
+    width: auto;
+    display: block;
+}
+
+.sidebar-title{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.sidebar {
+  width: 240px;
+  background: #ffffff;
+  border-right: 1px solid #e5e7eb;
+  padding: 20px;
+}
+
+.sidebar-title {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 16px;
+}
+
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.nav-item {
+  padding: 10px 12px;
+  text-decoration: none;
+  color: #111827;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.nav-item:hover {
+  background: #f3f4f6;
+}
+
+.nav-item.active {
+  background: #eef2ff;
+  color: #2563eb;
+  font-weight: 600;
+}
+
+
+.content {
+  flex: 1;
+  padding: 24px;
+  background: #f9fafb;
+}
+
+.main-content{
+    margin-left: 40px;
+    margin-top: 15px;
+}
+
+.headings{
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-top:75px;
+}
+
+
+
+/* Titles */
+.title {
+  margin: 0;
+}
+
+.subtitle {
+  margin-top: 4px;
+  color: #6b7280;
+}
+
+.section-title {
+  margin-top: 40px;
+}
+
+/* Cards Layout */
+.cards {
+  display: flex;
+  gap: 24px;
+  margin-top: 20px;
+}
+
+/* Individual Card */
+.card {
+  flex: 1;
+  background: #e0e2e7;
+  border: 1px solid #e5e7eb;
+  width:250px;
+  height:150px;
+  border-radius: 16px;
+  padding: 20px;
+  border-radius: 30px;
+  border: 0.5px solid rgb(221, 218, 218);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  margin-left: 30px;
+}
+
+.cards{
+  display:inline;
+  gap:24px;
+}
+
+/* Top Row */
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* Big Number */
+.number {
+  margin: 15px 0 5px 0;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+/* Trend Text */
+.trend {
+  font-size: 14px;
+  margin: 0;
+}
+
+.positive {
+  color: #16a34a;
+}
+
+.negative {
+  color: #dc2626;
+}
+
+/* Icon Box */
+.icon-box {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-box svg {
+  width: 35px;
+  height: 35px;
+  color: #6b7280;
+}
+
+/* Optional color variations */
+.icon-box.red svg {
+  color: #ef4444;
+}
+
+/* Timeline text */
+.timeline-text{
+  color:#6b7280; 
+}
+
+/* Recent Activity */
+.recent{
+  background-color:#ececf5 ;
+  width:900px;
+  height:400px;
+  margin-left: 50px;
+  margin-top:75px;
+  border-radius: 30px;
+  border: 0.5px solid rgb(221, 218, 218);
+}
+
+/* Search bar */
+.search{
+  border-radius:20px;
+  border: 0.5px solid rgb(221, 218, 218);
+  width:400px;
+  height:50px;
+  padding-left: 40px;
+  color: #6b7280;
+}
+
+.students-table{
+  background-color:#ececf5 ;
+  width:1000px;
+  height:400px;
+  margin-left: 10px;
+  margin-top:75px;
+  border-radius: 30px;
+  border: 0.5px solid rgb(221, 218, 218);
+}
