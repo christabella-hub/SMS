@@ -1,103 +1,276 @@
 <!DOCTYPE html>
-<html lang="en" >
-    <head> 
-        <meta charset="UTF-8">
-        <title> Administrator</title>
-        <link rel="stylesheet" href="admin.css">
-    </head>
-    <body>
-       <div class="layout">
-    <aside class="sidebar">
-        <div class="sidebar-title">
-      <img class="logo" src="logo.png" >
-      <h3 class="sidebar-title">Administration</h3>
-      </div>
-      <nav class="nav">
-        <a class="nav-item active" href="admin.html">▣  Dashboard</a>
-        <a class="nav-item" href="students.html">👥  Students</a>
-        <a class="nav-item">📚 Academics</a>
-        <a class="nav-item"> 📝 Discipline</a>
-        <a class="nav-item"> 🏠 Dormitory</a>
-        <a class="nav-item"> 💰 Finance</a>
-        <a class="nav-item"> ⚙️ Settings</a>
-      </nav>
-    </aside>
- <main class="main-content">
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>School Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../static/admin.css">
+</head>
 
-  <h1 class="title">School Management Dashboard</h1>
-  <p class="subtitle">Welcome back, Admin</p>
+<body>
 
-  <h2 class="section-title">📊 Overview Metrics</h2>
+<!-- SIDEBAR -->
+<div class="sidebar">
+   <img class="logo" src="../static/assets/logo.png">  
+   <ul class="menu">
+    <li class="active"> <svg viewBox="0 0 24 24" fill="none">
+  <rect x="3" y="3" width="7" height="7" rx="2" stroke="currentColor" stroke-width="2"/>
+  <rect x="14" y="3" width="7" height="4" rx="2" stroke="currentColor" stroke-width="2"/>
+  <rect x="14" y="10" width="7" height="11" rx="2" stroke="currentColor" stroke-width="2"/>
+  <rect x="3" y="14" width="7" height="7" rx="2" stroke="currentColor" stroke-width="2"/>
+</svg>Dashboard</li>
+    <li class="menu-item">
+     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
+      class="lucide lucide-users-icon lucide-users"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+      <path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/></svg>
+      Students <span class="arrow">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+     <path d="M9 6L15 12L9 18" stroke="#555" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+     </svg>
+    </span>
+    <ul class="submenu">
+      <li>Add</li>
+      <li>View</li>
+      <li>Edit</li>
+      <li>Delete</li>
+    </ul>
+  </li>
 
+   <li class="menu-item">
+     <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
+        class="lucide lucide-graduation-cap-icon lucide-graduation-cap">
+        <path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/>
+        <path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg></span>
+      Academics <span class="arrow">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+     <path d="M9 6L15 12L9 18" stroke="#555" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+     </svg>
+    </span>
+    <ul class="submenu">
+      <li>Graphs</li>
+      <li>Datasets</li>
+    </ul>
+  </li> 
+
+  <li class="menu-item">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+     stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+     <!-- head -->
+     <circle cx="12" cy="8" r="4"/>
+     <!-- shoulders -->
+     <path d="M4 20c0-4 4-6 8-6s8 2 8 6"/>
+     <!-- small detail (teacher vibe - like a badge/board pointer) -->
+     <path d="M18 6l2-2"/>
+    </svg>
+    Teachers <span class="arrow">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+     <path d="M9 6L15 12L9 18" stroke="#555" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+     </svg>
+    </span>
+    <ul class="submenu">
+      <li>Add</li>
+      <li>View</li>
+      <li>Edit</li>
+      <li>Delete</li>
+    </ul>
+  </li> 
+ 
+ <li class="menu-item">
+     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" 
+     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+     class="lucide lucide-scale-icon lucide-scale"><path d="M12 3v18"/><path d="m19 8 3 8a5 5 0 0 1-6 0zV7"/>
+     <path d="M3 7h1a17 17 0 0 0 8-2 17 17 0 0 0 8 2h1"/><path d="m5 8 3 8a5 5 0 0 1-6 0zV7"/><path d="M7 21h10"/></svg>
+      Discipline <span class="arrow">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+     <path d="M9 6L15 12L9 18" stroke="#555" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+     </svg>
+    </span>
+    <ul class="submenu">
+      <li>Add</li>
+      <li>View</li>
+    </ul>
+  </li> 
+<li class="menu-item">
+     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" 
+     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
+     class="lucide lucide-calendar-days-icon lucide-calendar-days"><path d="M8 2v4"/>
+     <path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/>
+     <path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/><path d="M16 18h.01"/></svg>
+     Class Schedules <span class="arrow">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+     <path d="M9 6L15 12L9 18" stroke="#555" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+     </svg>
+    </span>
+    <ul class="submenu">
+      <li>View</li>
+      <li>Delete</li>
+    </ul>
+  </li> 
+
+<li class="menu-item">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" 
+    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
+    class="lucide lucide-hand-coins-icon lucide-hand-coins"><path d="M11 15h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 17"/>
+    <path d="m7 21 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9"/><path d="m2 16 6 6"/>
+    <circle cx="16" cy="9" r="2.9"/><circle cx="6" cy="5" r="3"/></svg> 
+      Finance <span class="arrow">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+     <path d="M9 6L15 12L9 18" stroke="#555" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+     </svg>
+    </span>
+    <ul class="submenu">
+      <li>Add</li>
+      <li>View</li>
+      <li>Edit</li>
+      <li>Delete</li>
+    </ul>
+  </li>   
+  </ul>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+  <!-- TOP -->
+  <div class="topbar">
+        <div class="search-box">
+          <svg class="search-icon" viewBox="0 0 24 24">
+          <circle cx="11" cy="11" r="7" stroke="gray" stroke-width="2" fill="none"/>
+          <line x1="16" y1="16" x2="22" y2="22" stroke="gray" stroke-width="2"/>
+          </svg>
+          <input type="text" placeholder="Search student, Teacher or Record..." />
+   </div>
+   <div class="user-role">
+    <p class="active">Admin</p>
+    <p>DOS</p>
+    <p>DOD</p>
+    <p>Bursar</p>
+    <p>Teacher</p>
+    <p>Matron/Patron</p>
+    <p>Parent</p>
+   </div>
+   <div class="topbar-svg"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
+    class="lucide lucide-bell-icon lucide-bell"><path d="M10.268 21a2 2 0 0 0 3.464 0"/>
+    <path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"/></svg></div>
+  </div>
+
+  <!-- CARDS -->
   <div class="cards">
+    <div class="card"><span class="card-item"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
+      class="lucide lucide-users-icon lucide-users"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+      <path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/></svg>
+      <h3>Total Students</h3></span><p></p></div>
+    <div class="card"><span class="card-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+     stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+     <!-- head -->
+     <circle cx="12" cy="8" r="4"/>
+     <!-- shoulders -->
+     <path d="M4 20c0-4 4-6 8-6s8 2 8 6"/>
+     <!-- small detail (teacher vibe - like a badge/board pointer) -->
+     <path d="M18 6l2-2"/>
+    </svg><h3>Total Teachers</h3></span><p></p></div>
+    <div class="card"><span class="card-item">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+      fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      class="lucide lucide-landmark-icon lucide-landmark"><path d="M10 18v-7"/>
+      <path d="M11.12 2.198a2 2 0 0 1 1.76.006l7.866 3.847c.476.233.31.949-.22.949H3.474c-.53 0-.695-.716-.22-.949z"/><path d="M14 18v-7"/>
+      <path d="M18 18v-7"/><path d="M3 22h18"/><path d="M6 18v-7"/></svg> 
+      <h3>Total Classes</h3></span><p></p></div>
+     </div>
 
-    <!-- Students Card -->
-<div class="card students">
-  <div class="card-top">
-    <label for="total-students">Total Students</label>
+  <!-- PANEL -->
+  <div class="panel">
+    <div class="panel-card">
+      <h4>Student Management</h4>
+      <button>Add New</button>
+      <button>Edit Profile</button>
+      <button>Suspend</button>
+      <button>Delete</button>
+    </div>
 
-    <div class="icon-box">
-      <!-- Student Icon -->
-      <svg viewBox="0 0 24 24" fill="none" stroke="red" stroke-width="2">
-        <circle cx="12" cy="12" r="10"></circle>
-        <circle cx="12" cy="10" r="3"></circle>
-        <path d="M8 17c1.5-2 6.5-2 8 0"></path>
-      </svg>
+    <div class="panel-card">
+      <h4>User Roles</h4>
+      <button>Create</button>
+    </div>
+
+    <div class="panel-card">
+      <h4>Teacher Management</h4>
+      <button>Assign</button>
+    </div>
+
+    <div class="panel-card">
+      <h4>Class Control</h4>
+      <button>Create</button>
+    </div>
+
+    <div class="panel-card">
+      <h4>Subject Management</h4>
+      <button>Add</button>
     </div>
   </div>
 
-  <h1 id="total-students" class="number">1,247</h1>
-  <p class="trend positive">↑ 23 new</p><br>
-  <span class="timeline-text">This Term</span>
-</div>
+  <!-- MIDDLE -->
+  <div class="middle">
+    <div class="chart">
+      <h4>Attendance</h4>
+      <div class="bars">
+        <div class="bar" style="height:90px"></div>
+        <div class="bar" style="height:70px"></div>
+        <div class="bar" style="height:100px"></div>
+        <div class="bar" style="height:60px"></div>
+        <div class="bar" style="height:80px"></div>
+      </div>
+    </div>
 
-
-
-   <!-- Discipline Card -->
-<div class="card discipline">
-  <div class="card-top">
-    <label for="discipline-cases">Active Discipline Cases</label>
-
-    <div class="icon-box red">
-      <svg viewBox="0 0 24 24" fill="none" stroke="red" stroke-width="2">
-        <path d="M12 2l7 4v6c0 5-3.5 8-7 10-3.5-2-7-5-7-10V6l7-4z"></path>
-      </svg>
+    <div class="alerts">
+      <h4>Alerts</h4>
+      <div class="alert">124 Unpaid Fees</div>
+      <div class="alert">Inactive Staff</div>
+      <div class="alert">Backup Scheduled</div>
     </div>
   </div>
 
-  <h1 id="discipline-cases" class="number">8</h1>
-  <p class="trend negative">↓ 3 new cases</p><br>
-  <span class="timeline-text">This Week</span>
+  <!-- TABLE -->
+  <div class="table">
+    <h4>Recent Records</h4>
+    <table>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Action</th>
+        <th>Time</th>
+      </tr>
+
+      <tr>
+        <td><span class="tag student">Student</span></td>
+        <td>Jordan Smith</td>
+        <td>Updated</td>
+        <td>10:45 AM</td>
+      </tr>
+
+      <tr>
+        <td><span class="tag teacher">Teacher</span></td>
+        <td>Maria Garcia</td>
+        <td>Leave Approved</td>
+        <td>11:10 AM</td>
+      </tr>
+
+      <tr>
+        <td><span class="tag finance">Finance</span></td>
+        <td>Invoice #8852</td>
+        <td>Generated</td>
+        <td>11:56 AM</td>
+      </tr>
+
+    </table>
+  </div>
+
 </div>
 
-
-
-    <!-- Attendance Card -->
-  <div class="card attendance">
-  <div class="card-top">
-    <label for="attendance-rate">Attendance Rate</label>
-
-    <div class="icon-box green">
-      <svg viewBox="0 0 24 24" fill="none" stroke="red" stroke-width="2">
-        <rect x="3" y="4" width="18" height="18" rx="2"></rect>
-        <path d="M9 14l2 2 4-4"></path>
-      </svg>
-    </div>
-  </div>
-
-  <h1 id="attendance-rate" class="number">94.7%</h1>
-  <p class="trend positive">↑ 2.3% </p><br>
-  <span class="timeline-text">Last Month</span>
-</div>
-
-
-  </div>
-
-  <h2 class="headings">📝 Recent Activity</h2>
-
-  <div class="recent">
-
-  </div>
-
-  <h2 class="headings">⚡ Quick Actions</h2>
-</main>
+</body>
+</html>

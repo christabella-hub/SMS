@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>Login</title>
-  <link rel="stylesheet" href="login.css" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}" />
 </head>
 <body>
 
@@ -15,21 +15,24 @@
       <h1>Welcome back!</h1>
       <p class="subtitle">
         Simplify your workflow and boost your productivity<br>
-        with FAWE Assets Management App. Get started for free.
+        with Isonga Smart School Management System. Get started for free.
       </p>
 
+     <form action="/login" method="post">
       <div class="input-group">
-        <input type="text" placeholder="Username">
+        <input type="text" name="username" placeholder="Username">
       </div>
 
       <div class="input-group password">
-        <input type="password" placeholder="Password">
+        <input type="password" name="password" placeholder="Password">
         <span class="eye">👁</span>
       </div>
 
       <a href="#" class="forgot">Forgot Password?</a>
 
       <button class="login-btn">Login</button>
+     
+     </form>
 
       <div class="divider">
         <span>or continue with</span>
@@ -47,11 +50,11 @@
 
     <!-- RIGHT -->
     <div class="illustration">
-      <img src="fawe.png"
+      <img src="{{ url_for('static', filename='assets/logo.png') }}"
            alt="Illustration">
       <p>
         Make your work easier and organized<br>
-        with FAWE Asset Management App
+        with Isonga Smart School Management
       </p>
     </div>
 

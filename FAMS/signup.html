@@ -3,39 +3,49 @@
 <head>
   <meta charset="UTF-8" />
   <title>Sign Up</title>
-  <link rel="stylesheet" href="signup.css" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='signup.css') }}" />
 </head>
 <body>
 
 <div class="container">
   <div class="card">
-
-   
+    
+    <!-- LEFT FORM -->
     <div class="auth">
       <h1>Create account</h1>
       <p class="subtitle">
         Start managing your assets efficiently<br>
-        with FAWE Assets Management App.
+        with Isonga Smart School Management App.
       </p>
-
-      <input type="text" placeholder="Full Name">
-      <input type="email" placeholder="Email Address">
-      <input type="text" placeholder="Username">
-      <input type="text" placeholder="Delegation">
+     <form action="/signup" method="post" >
+      <input type="text" name="fullname" placeholder="Full Name">
+      <input type="email" name="emailaddress" placeholder="Email Address">
+      <input type="text" name="username" placeholder="Username">
+      <input type="text" name="school" placeholder="School">
+      <select name="delegation" required>
+       <option value="">Select Delegation</option>
+       <option value="finance">Finance</option>
+       <option value="academics">Academics</option>
+       <option value="administrator">Administrator</option>
+       <option value="discipline">Discipline</option>
+       <option value="teacher">Teacher</option>
+       <option value="matron">Matron</option>
+       <option value="parent">Parent</option>
+     </select>
 
       <div class="password-field">
-        <input type="password" placeholder="Password">
-        <span class="eye">👁</span>
+        <input type="password" name="password" placeholder="Password">
+        <span class="eye">🙈</span>
       </div>
 
       <div class="password-field">
-        <input type="password" placeholder="Confirm Password">
-        <span class="eye">👁</span>
+        <input type="password" name="confirmpassword" placeholder="Confirm Password">
+        <span class="eye">🙈</span>
+        <button class="primary-btn">Create Account</button>
       </div>
-
-      <button class="primary-btn">Create Account</button>
-
-      <div class="divider">or sign up with</div>
+     </form>
+      
+     <div class="divider">or sign up with</div>
 
       <div class="socials">
         <div class="social">G</div>
@@ -45,19 +55,40 @@
       <p class="switch">
         Already have an account? <a href="login.html">Login</a>
       </p>
+      
     </div>
 
-   
+    <!-- RIGHT TEXT / IMAGE (NO CARD) -->
     <div class="brand">
-      <img src="fawe.png" alt="FAWE Logo">
+      <img src="{{ url_for('static', filename='assets/logo.png') }}">
       <p>
         Make your work easier and organized<br>
-        with FAWE Asset Management App
+        with Isonga Smart School Management App
       </p>
     </div>
 
   </div>
 </div>
 
+<script>
+  const eyes = document.querySelectorAll(".eye");
+
+  eyes.forEach((eye) => {
+    eye.addEventListener("click", () => {
+      const input = eye.previousElementSibling;
+
+      if (input.type === "password") {
+        input.type = "text";
+        eye.textContent = "👁";
+      } else {
+        input.type = "password";
+        eye.textContent = "🙈";
+      }
+    });
+  });
+  
+</script>
+
 </body>
+
 </html>
